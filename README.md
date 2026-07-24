@@ -1,5 +1,8 @@
 # kysely-sensitive-param
 
+[![npm version](https://img.shields.io/npm/v/kysely-sensitive-param)](https://www.npmjs.com/package/kysely-sensitive-param)
+[![CI](https://github.com/juner/kysely-sensitive-param/actions/workflows/test.yml/badge.svg)](https://github.com/juner/kysely-sensitive-param/actions/workflows/test.yml)
+
 `kysely-sensitive-param` is a small helper package for passing raw values to Kysely queries while making sensitive parameters safer to handle in logs.
 
 ## Installation
