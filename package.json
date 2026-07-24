@@ -1,0 +1,52 @@
+{
+  "name": "kysely-sensitive-param",
+  "version": "1.0.0",
+  "description": "Helpers for hiding sensitive Kysely parameters from logs while unwrapping them before query execution.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "npx --node-options=--experimental-strip-types eslint --flag unstable_native_nodejs_ts_config .",
+    "lint:fix": "npx --node-options=--experimental-strip-types eslint --flag unstable_native_nodejs_ts_config . --fix",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "kysely",
+    "logging",
+    "security",
+    "typescript"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "kysely": "^0.29.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@stylistic/eslint-plugin": "^5.5.0",
+    "@types/node": "^24.0.14",
+    "@vitest/coverage-v8": "^4.1.10",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "kysely": "^0.29.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.46.4",
+    "vitest": "^4.1.10"
+  }
+}
