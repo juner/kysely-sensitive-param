@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1] - 2026-07-25
+
+### Fixed
+
+- Added `repository`, `bugs`, and `homepage` package metadata so npm links back to the GitHub repository, issue tracker, and README.
+
 ## [1.0.0] - 2026-07-24
 
 ### Added

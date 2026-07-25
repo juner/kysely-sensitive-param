@@ -1,6 +1,6 @@
 {
   "name": "kysely-sensitive-param",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helpers for hiding sensitive Kysely parameters from logs while unwrapping them before query execution.",
   "type": "module",
   "main": "./dist/index.js",
@@ -33,6 +33,14 @@
     "security",
     "typescript"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juner/kysely-sensitive-param.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juner/kysely-sensitive-param/issues"
+  },
+  "homepage": "https://github.com/juner/kysely-sensitive-param#readme",
   "license": "MIT",
   "peerDependencies": {
     "kysely": "^0.29.0"
