@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1] - 2026-07-27
+
+### Added
+
+- Added JSDoc comments for exported APIs to improve package documentation.
+
 ## [1.1.0] - 2026-07-27
 
 ### Added
