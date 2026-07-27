@@ -13,7 +13,7 @@ npm install kysely kysely-sensitive-param
 
 ## Features
 
-- Mark sensitive values with `markSensitive(value)`
+- Mark sensitive values with `markSensitive(value)` for primitives and primitive arrays
 - Unwrap marked values immediately before query execution with `SensitiveUnwrappingDialect`
 - Mask or explicitly reveal `SensitiveParam` values in logs with `makeLogging()`
 
@@ -43,6 +43,11 @@ await db
   .where("email", "=", "octocat@example.com")
   .where("password", "=", markSensitive("super-secret"))
   .executeTakeFirst();
+
+await db
+  .selectFrom("users")
+  .where("status", "in", markSensitive(["active", "pending"]))
+  .execute();
 ```
 
 ## Logging behavior
