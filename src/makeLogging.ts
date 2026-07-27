@@ -47,6 +47,13 @@ function formatParameter(
   return `${sensitivePlaceholder}${toLiteral(getSensitiveValue(param))}`;
 }
 
+/**
+ * Creates a Kysely logging handler that can redact sensitive parameters.
+ *
+ * @param options Configuration for whether to log queries, whether to reveal sensitive values,
+ * and the placeholder used when sensitive values are hidden.
+ * @returns A logging callback for Kysely, or undefined when logging is disabled.
+ */
 export function makeLogging(options?: MakeLoggingOptions): LogConfig | undefined {
   const resolvedOptions = {
     enableSensitiveDataLogging: false,
