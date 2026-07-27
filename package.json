@@ -1,6 +1,6 @@
 {
   "name": "kysely-sensitive-param",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Helpers for hiding sensitive Kysely parameters from logs while unwrapping them before query execution.",
   "type": "module",
   "main": "./dist/index.js",
