@@ -36,7 +36,7 @@ class SensitiveParam<T extends SensitivePrimitive> implements Expression<T> {
 export type {
   SensitiveParam,
   SensitivePrimitive,
-  SensitivePrimitiveArray
+  SensitivePrimitiveArray,
 };
 
 function isSensitivePrimitiveArray(value: SensitivePrimitive | SensitivePrimitiveArray): value is SensitivePrimitiveArray {
