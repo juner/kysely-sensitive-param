@@ -16,6 +16,22 @@ describe("SensitiveParam", () => {
     expect(getSensitiveValue(markSensitive(true))).toBe(true);
   });
 
+  it("marks array values as sensitive and preserves each original value", () => {
+    const values = markSensitive(["secret", "public"] as const);
+
+    expect(values).toHaveLength(2);
+    expect(values.every(v => isSensitive(v))).toBe(true);
+    expect(values.map(v => getSensitiveValue(v))).toEqual(["secret", "public"]);
+  });
+
+  it("marks numeric arrays as sensitive and preserves order", () => {
+    const values = markSensitive([3, 1, 4]);
+
+    expect(values).toHaveLength(3);
+    expect(values.every(v => isSensitive(v))).toBe(true);
+    expect(values.map(v => getSensitiveValue(v))).toEqual([3, 1, 4]);
+  });
+
   it("creates a Kysely value node containing the wrapper instance", () => {
     const value = markSensitive("secret");
 
