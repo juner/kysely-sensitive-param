@@ -14,6 +14,7 @@ describe("SensitiveParam", () => {
     expect(getSensitiveValue(markSensitive("secret"))).toBe("secret");
     expect(getSensitiveValue(markSensitive(42))).toBe(42);
     expect(getSensitiveValue(markSensitive(true))).toBe(true);
+    expect(getSensitiveValue(markSensitive(null))).toBeNull();
   });
 
   it("marks array values as sensitive and preserves each original value", () => {

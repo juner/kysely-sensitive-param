@@ -1,6 +1,6 @@
 import type { Expression, ValueNode } from "kysely";
 
-type SensitivePrimitive = string | number | boolean;
+type SensitivePrimitive = string | number | boolean | null;
 type SensitivePrimitiveArray = readonly string[] | readonly number[] | readonly boolean[];
 
 /**
