@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.3] - 2026-11-16
+
+### Changed
+
+- Updated `engines.node` requirement to `>=22.12.0`.
+
+### Fixed
+
+- Added `default` condition to `exports["."]` so the package can be loaded from CommonJS via `require(esm)`.
+
 ## [1.1.2] - 2026-07-27
 
 ### Added
